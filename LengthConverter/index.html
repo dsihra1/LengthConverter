@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		body{
+			margin-top: 45px;
+			margin-left: 25px;
+			background: blue;
+			color: white;
+		}
+	</style>
+	<title>Distance Converter</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="display-4 text-center mb-3">Distance(Meters) Converter</h1>
+				<form>
+					<div class="form-group">
+						<input id="mInput" type="number" class=" form-control form-control-lg" placeholder="Enter Distance(Meters)...">
+					</div>
+				</form>
+				<div id="output">
+					<div id="card">
+						<div class="card-block">
+							<h4>Kilometre:</h4>
+							<div id="kiloOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Centimetre:</h4>
+							<div id="centOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Millimetre:</h4>
+							<div id="millOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Micrometre:</h4>
+							<div id="microOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Yard:</h4>
+							<div id="yardOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Foot:</h4>
+							<div id="footOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Inch:</h4>
+							<div id="inchOutput"></div>
+						</div>
+					</div>
+
+					<div id="card">
+						<div class="card-block">
+							<h4>Nautical Mile:</h4>
+							<div id="nmOutput"></div>
+						</div>
+					</div>
+
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		document.getElementById('mInput').addEventListener('input', function(e){
+			let m = e.target.value;
+			document.getElementById('kiloOutput').innerHTML = m * 0.001;
+			document.getElementById('centOutput').innerHTML = m * 100;
+			document.getElementById('millOutput').innerHTML = m * 1000;
+			document.getElementById('microOutput').innerHTML = m / 0.0000010000;
+			document.getElementById('yardOutput').innerHTML = m * 1.0936;
+			document.getElementById('footOutput').innerHTML = m * 3.281;
+			document.getElementById('inchOutput').innerHTML = m * 39.37;
+			document.getElementById('nmOutput').innerHTML = m / 1852;
+
+
+		}); 
+	</script>
+</body>
+</html>
